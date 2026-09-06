@@ -15,22 +15,28 @@ import Users from './Components/Users/Users.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>
-    
+    element: <Home></Home>, // home er modhe childer path add,so home modhe kothai dekhabo output of childer seta outlet diye bolte hobe
+    children: [
+      {
+        path: "/about",
+        element: <div>
+          <p>aaaabout</p>
+          <About></About>
+          </div>
+      },
+      {
+        path: "/users",
+        element: <Users></Users>
+      },
+      {
+        path: "contact",
+        element: <Contact></Contact>
+      }
+    ]
+
   },
 
-  {
-    path: "/about",
-    element: <div>about</div>
-  },
-  {
-    path: "/users",
-    element: <Users></Users>
-  },
-  {
-    path: "contact",
-    element: <Contact></Contact>
-  }
+
 ]);
 
 createRoot(document.getElementById('root')).render(
