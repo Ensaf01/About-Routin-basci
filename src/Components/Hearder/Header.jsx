@@ -9,6 +9,7 @@ const Header = () => {
                 <Link style={{marginRight:'20px'}} to="/about">About</Link>
                 <Link style={{marginRight:'20px'}} to="/users">Users</Link>
                 <Link style={{marginRight:'20px'}} to="/contact">Contact</Link>
+               
             </nav>
         </div>
     );
