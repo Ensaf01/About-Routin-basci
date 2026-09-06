@@ -38,6 +38,7 @@ const router = createBrowserRouter([
         path:'/user/:userId',
         loader:({params})=> fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         element:<UserDetails></UserDetails>
+        // akhne link a click howar pore id ta asbe and loader er modhe params destructure hobe and then params userId or sxy name dynamically load data show korbe
       }
     ]
 
