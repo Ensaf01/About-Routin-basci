@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const User = ({ user }) => {
@@ -9,6 +9,11 @@ const User = ({ user }) => {
         padding: '5px',
         borderRadius: '30px'
     }
+    const naviage= useNavigate();
+    
+    const showmorebutton=() =>{
+        naviage(`/user/${id}`)
+    }
     return (
         <div style={userStyle}>
 
@@ -16,12 +21,11 @@ const User = ({ user }) => {
             <p>email:{email}</p>
             <p>phone: {phone}</p>
             <Link to={`/user/${id}`}>ShowDetails</Link>
-            
+
             {/* <Link to={`/user/${id}`}>
                 <button>ShowDetails</button>
             </Link> */}
-
-
+            <button onClick={showmorebutton}> Show More button </button>
 
         </div>
     );
